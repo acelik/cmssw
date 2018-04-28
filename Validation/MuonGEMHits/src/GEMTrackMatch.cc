@@ -17,7 +17,11 @@ GEMTrackMatch::~GEMTrackMatch() {
 void GEMTrackMatch::FillWithTrigger( MonitorElement* hist[3],Float_t eta)
 {
   for( unsigned int i=0 ; i<nstation ; i++) {
-    hist[i]->Fill(eta);
+    std::cout << "Value of Phi: " << phi <<std::endl;
+      if ((phi <= -1.13446 && phi >= -1.8326) || (phi <= 0.0872664626 && phi >= -0.0872664626)) {
+        std::cout << "Phi's value is within the range and it is :" << phi <<std::endl;
+        hist[i]->Fill(eta);
+      }
   }
   return;
 }
