@@ -146,7 +146,7 @@ void GEMRecHitTrackMatch::analyze(const edm::Event& iEvent, const edm::EventSetu
       track_.gem_rh[ id.station()-1][ (id.layer()-1)] = true;
     }
     
-    FillWithTrigger( track_eta, fabs(track_.eta)) ;
+    FillWithTrigger( track_eta, fabs(track_.eta), track_.phi) ;
     FillWithTrigger( track_phi, fabs(track_.eta), track_.phi, track_.hitOdd, track_.hitEven);
 
 
