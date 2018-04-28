@@ -173,7 +173,7 @@ void GEMDigiTrackMatch::analyze(const edm::Event& iEvent, const edm::EventSetup&
       }
 
 
-      FillWithTrigger( track_eta, fabs(track_.eta)) ;
+      FillWithTrigger( track_eta, fabs(track_.eta), track_.phi ) ;
       FillWithTrigger( track_phi, fabs(track_.eta), track_.phi, track_.hitOdd, track_.hitEven);
 
 
