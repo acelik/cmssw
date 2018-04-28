@@ -126,7 +126,7 @@ void GEMSimTrackMatch::analyze(const edm::Event& iEvent, const edm::EventSetup& 
         else { std::cout<<"Error to get chamber id"<<std::endl;}
         track_.gem_sh[ id.station()-1][ (id.layer()-1)] = true;
       }
-      FillWithTrigger( track_eta, fabs(track_.eta)) ;
+      FillWithTrigger( track_eta, fabs(track_.eta), track_.phi ) ;
       FillWithTrigger( track_phi, fabs(track_.eta), track_.phi, track_.hitOdd, track_.hitEven);
       FillWithTrigger( sh_eta, track_.gem_sh  , fabs( track_.eta) );
       FillWithTrigger( sh_phi, track_.gem_sh ,fabs(track_.eta), track_.phi , track_.hitOdd, track_.hitEven);
