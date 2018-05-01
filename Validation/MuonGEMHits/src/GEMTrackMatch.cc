@@ -14,7 +14,7 @@ GEMTrackMatch::GEMTrackMatch(const edm::ParameterSet& ps)
 GEMTrackMatch::~GEMTrackMatch() {
 }
 
-void GEMTrackMatch::FillWithTrigger( MonitorElement* hist[3],Float_t eta)
+void GEMTrackMatch::FillWithTrigger( MonitorElement* hist[3],Float_t eta, Float_t phi)
 {
   for( unsigned int i=0 ; i<nstation ; i++) {
     std::cout << "Value of Phi: " << phi <<std::endl;
